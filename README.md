@@ -20,7 +20,7 @@
     * `label_output` : match the label and forward the packet to the port
     * `pop_label_output` : remove header `srcRoute_t` and output to the port
 4. Create a table for label routing (`s1-runtime.json`, `s2-runtime.json`)
-5. Modify rules to forward the label “1” to h2
+5. Modify rules to forward the label `1` to h2
 
 ## Requirements
 * I assume `Oracle VM VirtualBox`. You have to install
@@ -78,12 +78,12 @@ source_routing
     * ![](images/xterm_h1_h2_init.png)
 * h1 send h2 (出現下圖結果，表示 h2 成功收到 h1 的 packet)
     * ![](images/xterm_h1_h2.png)
-* 檢查 packet 經過的 switch (使用 wireshark) 
+* 檢查 packet 經過的 switch (使用 `~source_routing/pcaps` 裡的 Wireshark) 
     * ![](images/open_wireshark.png)
-* 可以看出 s1_out 跟 s2_out 都有收到 protocol 是 0x1234 的 packet
+* 可以看出 `s1-eth1_out.pcap` 跟 `s2-eth2_out.pcap` 都有收到 Protocol 是 `0x1234` 的 packet
     * ![](images/P4_wireshark_S1_S2.png)
 
 ## Reference
 
 * [P4_lang/tutorials ... source_routing](https://github.com/p4lang/tutorials/tree/master/exercises/source_routing)
-* NTUST , Pei-Li Sun PROFESSOR
+* 【NTUST】 CS5146701 Lab2 , Pei-Li Sun PROFESSOR
