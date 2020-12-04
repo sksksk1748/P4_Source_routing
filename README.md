@@ -76,6 +76,13 @@ source_routing
 ## Result
 * h1 key in `1`
     * ![](images/xterm_h1_h2_init.png)
+        * key in 的 `1` ,就是特殊 header 的 Label, 所以 table rule match 的 port, 其實就是這邊 key in 的 `1`
+        ```
+        ---------------------------------------------------------------------------------
+        | Ethernet | Label = 自己輸入要輸入的 port number (command line 輸入), bos=1 | IP |
+        ---------------------------------------------------------------------------------
+        ```
+
 * h1 send h2 (出現下圖結果，表示 h2 成功收到 h1 的 packet)
     * ![](images/xterm_h1_h2.png)
 * 檢查 packet 經過的 switch (使用 `~source_routing/pcaps` 裡的 Wireshark) 
