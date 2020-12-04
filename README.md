@@ -33,7 +33,7 @@
 ## Your `~/source_routing/` folder should look like this
 ```
 source_routing
-├── build/
+├── build/ #compile完才會產生
 │   └── ...
 ├── logs/  #compile完才會產生
 │   └── ...
